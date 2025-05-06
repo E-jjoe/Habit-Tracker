@@ -1,10 +1,15 @@
-/* style.css */
+/* General Styles */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f4f8;
-  color: #333;
+  background-color: #f2f4f7;
   margin: 0;
   padding: 20px;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 header {
@@ -12,36 +17,88 @@ header {
   margin-bottom: 20px;
 }
 
-#habit-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+header h1 {
+  font-size: 2.5em;
+  color: #ff6f61;
 }
 
-.habit-item {
-  background-color: #fff;
-  border-left: 5px solid #4caf50;
-  padding: 10px;
-  border-radius: 4px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.habit-item.completed {
-  opacity: 0.6;
-  text-decoration: line-through;
+header p {
+  color: #444;
 }
 
 button {
   background-color: #4caf50;
   color: white;
   border: none;
-  padding: 10px;
-  border-radius: 4px;
+  padding: 10px 16px;
+  border-radius: 8px;
   cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+  margin-top: 20px;
 }
 
 button:hover {
   background-color: #45a049;
 }
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Cards and Layout */
+.section {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.habit-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.habit-card {
+  background-color: #ffd54f;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.habit-card:hover {
+  transform: scale(1.05);
+  background-color: #ffb300;
+}
+
+.habit-card.completed {
+  background-color: #66bb6a;
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.completed-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Success & Achievement Animations */
+@keyframes confetti {
+  0% { transform: rotate(0deg); opacity: 0; }
+  100% { transform: rotate(360deg); opacity: 1; }
+}
+
+.achievement {
+  background-color: #ff6f61;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  box-shadow: 0px 3px
