@@ -1,45 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habit Tracker</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ADHD-Friendly Habit Tracker</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Habit Tracker</h1>
-            <p>Track your habits, earn points, and watch your progress!</p>
-        </header>
-        <main>
-            <div class="task-section">
-                <h2>Tasks</h2>
-                <ul id="taskList"></ul>
-                <button id="addTaskBtn">Add New Task</button>
-            </div>
-            <div class="performance-section">
-                <h2>Performance</h2>
-                <div id="performanceSummary"></div>
-            </div>
-            <div class="challenges-section">
-                <h2>Challenges</h2>
-                <div id="challengesList"></div>
-                <button id="addChallengeBtn">Add New Challenge</button>
-            </div>
-            <div class="rewards-section">
-                <h2>Rewards</h2>
-                <div id="rewardsDisplay"></div>
-            </div>
-        </main>
-        <footer>
-            <p>Created for visual learners with ADHD. Track, win, and improve!</p>
-        </footer>
-    </div>
-    <div id="achievementPopup" class="popup">
-        <p>Achievement Unlocked!</p>
-        <button id="closePopupBtn">Close</button>
-    </div>
-    <script src="script.js"></script>
+  <header>
+    <h1>Habit Tracker</h1>
+  </header>
+  <main>
+    <section id="habit-list">
+      <!-- Habit items will be dynamically inserted here -->
+    </section>
+    <button id="add-habit">Add Habit</button>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
