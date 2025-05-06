@@ -3,19 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ADHD-Friendly Habit Tracker</title>
+  <title>Habit Tracker - Fun & Colorful</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <h1>Habit Tracker</h1>
+    <p>Your invisible wins await!</p>
   </header>
+
   <main>
-    <section id="habit-list">
-      <!-- Habit items will be dynamically inserted here -->
+    <section id="habit-suggestions" class="section">
+      <h2>Habit Suggestions</h2>
+      <div id="habit-cards" class="habit-cards"></div>
     </section>
-    <button id="add-habit">Add Habit</button>
+
+    <section id="completed-habits" class="section">
+      <h2>Your Achievements</h2>
+      <div id="completed-list" class="completed-list"></div>
+    </section>
+
+    <button id="add-habit">+ Add Habit</button>
   </main>
+
   <script src="script.js"></script>
 </body>
 </html>
